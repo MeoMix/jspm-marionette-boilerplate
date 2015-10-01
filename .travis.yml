@@ -1,11 +1,10 @@
 ﻿language: node_js
 node_js:
-  - "stable"
+  - "4.1"
 before_install:
   - npm install -g gulp
   - npm install -g jspm
 before_script:
-  - npm install
   - jspm install
 script:
   - gulp test
