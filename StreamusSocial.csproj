@@ -24,11 +24,13 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\</OutputPath>
+    <OutputPath>.\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <PlatformTarget>AnyCPU</PlatformTarget>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <PublishDatabases>false</PublishDatabases>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -61,32 +63,26 @@
     <Content Include=".gitignore" />
     <Content Include="config.js" />
     <Content Include="css.js" />
-    <Content Include="css\component.css" />
-    <Content Include="css\index.css" />
     <Content Include="gulpfile.js" />
-    <Content Include="index.html" />
-    <Content Include="js\main.js" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="js\application.js" />
+    <Content Include="karma.conf.js" />
     <Content Include="package.json" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="js\collection\" />
-    <Folder Include="js\enum\" />
-    <Folder Include="js\model\" />
-    <Folder Include="js\view\" />
-    <Folder Include="less\" />
-    <Folder Include="template\" />
+    <Folder Include="src\common\shim\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="web.config" />
-    <None Include="web.Debug.config">
-      <DependentUpon>web.config</DependentUpon>
-    </None>
-    <None Include="web.Release.config">
-      <DependentUpon>web.config</DependentUpon>
-    </None>
+    <Content Include="src\application\application.css" />
+    <Content Include="src\index.css" />
+    <Content Include="src\index.html" />
+    <Content Include="src\application\application.js" />
+    <Content Include="src\common\utility.js" />
+    <Content Include="src\main.js" />
+    <Content Include="test\unit\application.spec.js" />
+    <Content Include="web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

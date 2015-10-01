@@ -1,0 +1,10 @@
+﻿sudo: false
+language: node_js
+node_js:
+- '0.12'
+before_install:
+- npm install -g gulp
+- npm install -g jspm
+before_script:
+- npm install
+- jspm install

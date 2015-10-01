@@ -1,4 +1,4 @@
-﻿import Application from './application';
+﻿import Application from './application/application';
 
 var application = new Application();
 application.start();
