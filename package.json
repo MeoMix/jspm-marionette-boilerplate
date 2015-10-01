@@ -70,8 +70,5 @@
   },
   "dependencies": {
     "jspm": "^0.16.11"
-  },
-  "scripts": {
-    "test": "gulp test --verbose"
   }
 }
