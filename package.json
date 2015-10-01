@@ -16,7 +16,9 @@
   "scripts": {
     "test": "gulp test"
   },
-  "engine": "node 4.1.1",
+  "engines": { 
+    "node": ">=4.1"
+  },
   "jspm": {
     "dependencies": {
       "autoprefixer": "npm:autoprefixer@^6.0.3",
