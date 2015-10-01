@@ -1,8 +1,9 @@
 ﻿language: node_js
 node_js:
-- '4.1'
+  - '4.1'
 before_install:
-- npm install -g gulp
-- npm install -g jspm
+  - npm install -g gulp
+  - npm install -g jspm
 before_script:
-- jspm install
+  - jspm install
+install: npm install
