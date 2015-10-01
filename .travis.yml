@@ -1,7 +1,6 @@
-﻿sudo: false
-language: node_js
+﻿language: node_js
 node_js:
-  - "4.1"
+  - "stable"
 before_install:
   - npm install -g gulp
   - npm install -g jspm
