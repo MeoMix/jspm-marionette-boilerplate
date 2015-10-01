@@ -3,15 +3,7 @@ node_js:
   - 4.1
 env:
   global:
-    - CXX=g++-4.8
     - secure: N/yV6FNB4bOhqk5AgGTMylbHTk/2uZK/kfOmIiDRhK6eIeuDcyb/KyasAeFztnzRxbjeLx1pCimSafthLbL4VxP1MtNag/qYwg/58tQ89guuvkFuAdYAVk28Ub6giW6mAQZyfzehrwOOVZeMhl7w4Kg9UNC3Y4iGF746pkworGM=
-addons:
-  apt:
-    sources:
-      - ubuntu-toolchain-r-test
-    packages:
-      - gcc-4.8
-      - g++-4.8
 before_install:
   ############
   ## Need special configuration to enable Chrome support for KarmaJS
