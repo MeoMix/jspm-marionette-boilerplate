@@ -7,6 +7,8 @@ var Server = require('karma').Server;
 
 var sourceFiles = ['src/**/*.js'];
 
+gulp.task('default', ['test']);
+
 // Convert ES6 files to ES5 and move to /compiled directory.
 // Move non-ES6 files over to /compiled directory.
 gulp.task('compile', function() {

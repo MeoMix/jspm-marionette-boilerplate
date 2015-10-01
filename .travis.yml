@@ -3,8 +3,4 @@ node_js:
   - "4.1"
 before_install:
   - npm install -g gulp
-  - npm install -g jspm
-before_script:
-  - jspm install
-script:
-  - gulp test
+script: gulp
