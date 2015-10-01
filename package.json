@@ -5,6 +5,14 @@
   "description": "Website for listening to music",
   "license": "Apache License v2.0",
   "author": "Sean Anderson",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MeoMix/StreamusSocial.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MeoMix/StreamusSocial/issues"
+  },
+  "homepage": "https://github.com/MeoMix/StreamusSocial",
   "jspm": {
     "dependencies": {
       "autoprefixer": "npm:autoprefixer@^6.0.3",
