@@ -5,6 +5,20 @@
   "description": "Website for listening to music",
   "license": "Apache License v2.0",
   "author": "Sean Anderson",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MeoMix/StreamusSocial.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MeoMix/StreamusSocial/issues"
+  },
+  "homepage": "https://github.com/MeoMix/StreamusSocial",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "engines": { 
+    "node": ">=4.1"
+  },
   "jspm": {
     "dependencies": {
       "autoprefixer": "npm:autoprefixer@^6.0.3",
@@ -53,7 +67,6 @@
     "chai": "^3.2.0",
     "gulp": "^3.9.0",
     "gulp-babel": "^5.2.1",
-    "gulp-mocha": "^2.1.3",
     "gulp-plumber": "^1.0.1",
     "gulp-watch": "^4.3.5",
     "jsdom": "^6.5.1",
@@ -64,14 +77,10 @@
     "karma-mocha": "^0.2.0",
     "karma-sinon": "^1.0.4",
     "karma-sinon-chai": "^1.1.0",
-    "lodash": "^3.10.1",
     "mocha": "^2.3.3",
     "systemjs-builder": "^0.14.7"
   },
   "dependencies": {
     "jspm": "^0.16.11"
-  },
-  "scripts": {
-    "test": "gulp test --verbose"
   }
 }
