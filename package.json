@@ -13,6 +13,9 @@
     "url": "https://github.com/MeoMix/StreamusSocial/issues"
   },
   "homepage": "https://github.com/MeoMix/StreamusSocial",
+  "scripts": {
+    "test":  "gulp test"
+  },
   "jspm": {
     "dependencies": {
       "autoprefixer": "npm:autoprefixer@^6.0.3",
