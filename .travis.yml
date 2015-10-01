@@ -4,5 +4,9 @@ node_js:
 before_install:
   - npm install -g gulp
   - npm install -g jspm
+  - jspm config registries.github.auth $JSPM_GITHUB_AUTH_TOKEN
 before_script:
   - jspm install
+env:
+  global:
+  - secure: N/yV6FNB4bOhqk5AgGTMylbHTk/2uZK/kfOmIiDRhK6eIeuDcyb/KyasAeFztnzRxbjeLx1pCimSafthLbL4VxP1MtNag/qYwg/58tQ89guuvkFuAdYAVk28Ub6giW6mAQZyfzehrwOOVZeMhl7w4Kg9UNC3Y4iGF746pkworGM=
