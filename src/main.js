@@ -1,4 +1,4 @@
 ﻿import Application from './application/application';
 
-var application = new Application();
+const application = new Application();
 application.start();

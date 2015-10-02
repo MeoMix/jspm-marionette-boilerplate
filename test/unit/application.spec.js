@@ -1,14 +1,16 @@
 ﻿import Application from 'src/application/application';
 
-describe('Application', function() {
-  beforeEach(function() {
-    this.application = new Application();
+describe('Application', () => {
+  let application;
+
+  beforeEach(() => {
+    application = new Application();
   });
 
-  it('should start', function() {
-    var spy = sinon.spy();
-    this.application.on('start', spy);
-    this.application.start();
+  it('should start', () => {
+    const spy = sinon.spy();
+    application.on('start', spy);
+    application.start();
     expect(spy.calledOnce).to.equal(true);
   });
 });

@@ -4,7 +4,6 @@ release
 compiled
 
 # JSPM
-jspm_packages/*/*
 jspm_packages
 
 # Node
@@ -15,3 +14,4 @@ node_modules
 *.user
 obj
 bin
+*.config

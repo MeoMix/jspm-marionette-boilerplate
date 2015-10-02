@@ -87,6 +87,15 @@
   <ItemGroup>
     <Content Include=".travis.yml" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="changelog.md" />
+    <Content Include="CONTRIBUTING.md" />
+    <Content Include="LICENSE" />
+    <Content Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".eslintrc" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
