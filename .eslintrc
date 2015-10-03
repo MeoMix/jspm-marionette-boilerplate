@@ -40,7 +40,7 @@
     "curly": [2],
     "default-case": [2],
     "dot-notation": [2],
-    "dot-location": [2],
+    "dot-location": [2, "property"],
     "eqeqeq": [2],
     "guard-for-in": [2],
     "no-alert": [2],

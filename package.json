@@ -65,6 +65,7 @@
     "chai": "^3.2.0",
     "gulp": "^3.9.0",
     "gulp-babel": "^5.2.1",
+    "gulp-copy": "0.0.2",
     "gulp-eslint": "^1.0.0",
     "gulp-plumber": "^1.0.1",
     "gulp-util": "^3.0.6",

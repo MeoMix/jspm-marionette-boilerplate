@@ -63,7 +63,7 @@
     <Content Include=".gitignore" />
     <Content Include="config.js" />
     <Content Include="css.js" />
-    <Content Include="gulpfile.js" />
+    <Content Include="gulpfile.babel.js" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="karma.conf.js" />
@@ -95,6 +95,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".eslintrc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="test\.eslintrc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
