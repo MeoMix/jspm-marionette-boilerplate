@@ -61,7 +61,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
-    <Content Include="config.js" />
     <Content Include="css.js" />
     <Content Include="gulpfile.babel.js" />
   </ItemGroup>
@@ -71,7 +70,8 @@
     <Content Include="gulp\lint.js" />
     <Content Include="gulp\test.js" />
     <Content Include="gulp\watch.js" />
-    <Content Include="karma.conf.js" />
+    <Content Include="jspm.config.js" />
+    <Content Include="karma.config.js" />
     <Content Include="package.json" />
   </ItemGroup>
   <ItemGroup>

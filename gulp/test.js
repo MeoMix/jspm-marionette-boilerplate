@@ -5,7 +5,7 @@ const Server = require('karma').Server;
 // http://karma-runner.github.io/
 gulp.task('test', (done) => {
   const server = new Server({
-    configFile: `${__dirname}/../karma.conf.js`,
+    configFile: `${__dirname}/../karma.config.js`,
     singleRun: true
   }, done);
 

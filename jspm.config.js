@@ -20,7 +20,7 @@ System.config({
     'backbone': 'npm:backbone@1.2.3',
     'backbone.babysitter': 'github:marionettejs/backbone.babysitter@0.1.10',
     'backbone.wreqr': 'github:marionettejs/backbone.wreqr@1.3.5',
-    'core-js': 'npm:core-js@1.1.4',
+    'core-js': 'npm:core-js@1.2.1',
     'css': 'npm:jspm-loader-css@1.0.0',
     'handlebars': 'github:components/handlebars.js@4.0.3',
     'hbs': 'github:davis/plugin-hbs@1.1.0',
@@ -30,7 +30,7 @@ System.config({
     'lodash': 'npm:lodash@3.10.1',
     'marionette': 'github:marionettejs/backbone.marionette@2.4.3',
     'github:Hypercubed/systemjs-plugin-html@0.0.6': {
-      'webcomponentsjs': 'github:webcomponents/webcomponentsjs@0.7.12'
+      'webcomponentsjs': 'github:webcomponents/webcomponentsjs@0.7.14'
     },
     'github:davis/plugin-hbs@1.1.0': {
       'handlebars': 'github:components/handlebars.js@4.0.3'
@@ -61,9 +61,9 @@ System.config({
     },
     'npm:autoprefixer@6.0.3': {
       'browserslist': 'npm:browserslist@1.0.0',
-      'caniuse-db': 'npm:caniuse-db@1.0.30000321',
+      'caniuse-db': 'npm:caniuse-db@1.0.30000333',
       'num2fraction': 'npm:num2fraction@1.2.2',
-      'postcss': 'npm:postcss@5.0.6',
+      'postcss': 'npm:postcss@5.0.8',
       'process': 'github:jspm/nodelibs-process@0.1.1',
       'systemjs-json': 'github:systemjs/plugin-json@0.1.0'
     },
@@ -74,7 +74,7 @@ System.config({
       'process': 'github:jspm/nodelibs-process@0.1.1'
     },
     'npm:browserslist@1.0.0': {
-      'caniuse-db': 'npm:caniuse-db@1.0.30000321',
+      'caniuse-db': 'npm:caniuse-db@1.0.30000333',
       'fs': 'github:jspm/nodelibs-fs@0.1.2',
       'path': 'github:jspm/nodelibs-path@0.1.0',
       'process': 'github:jspm/nodelibs-process@0.1.1',
@@ -85,7 +85,7 @@ System.config({
       'ieee754': 'npm:ieee754@1.1.6',
       'is-array': 'npm:is-array@1.0.1'
     },
-    'npm:core-js@1.1.4': {
+    'npm:core-js@1.2.1': {
       'fs': 'github:jspm/nodelibs-fs@0.1.2',
       'process': 'github:jspm/nodelibs-process@0.1.1',
       'systemjs-json': 'github:systemjs/plugin-json@0.1.0'
@@ -163,7 +163,7 @@ System.config({
       'source-map': 'npm:source-map@0.4.4',
       'systemjs-json': 'github:systemjs/plugin-json@0.1.0'
     },
-    'npm:postcss@5.0.6': {
+    'npm:postcss@5.0.8': {
       'fs': 'github:jspm/nodelibs-fs@0.1.2',
       'js-base64': 'npm:js-base64@2.1.9',
       'path': 'github:jspm/nodelibs-path@0.1.0',

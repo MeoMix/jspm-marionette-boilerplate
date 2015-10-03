@@ -54,7 +54,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome', 'Firefox', 'IE'],
+    browsers: ['Chrome', 'Firefox'],
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
@@ -66,10 +66,6 @@ module.exports = function(config) {
       Chrome_travis_ci: {
         base: 'Chrome',
         flags: ['--no-sandbox']
-      },
-      ChromeCanary_travis_ci: {
-        base: 'ChromeCanary',
-        flags: ['--no-sandbox']
       }
     }
   };
@@ -78,7 +74,7 @@ module.exports = function(config) {
   // Need to pass the --no-sandbox flag in to use as expected.
   // http://stackoverflow.com/a/25661593/633438
   if (process.env.TRAVIS) {
-    configuration.browsers = ['Chrome_travis_ci', 'Firefox', 'IE'];
+    configuration.browsers = ['Chrome_travis_ci', 'Firefox'];
   }
 
   config.set(configuration);
