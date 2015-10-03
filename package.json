@@ -67,7 +67,8 @@
     "gulp-babel": "^5.2.1",
     "gulp-copy": "0.0.2",
     "gulp-eslint": "^1.0.0",
-    "gulp-plumber": "^1.0.1",
+    "gulp-minify-html": "^1.0.4",
+    "gulp-replace": "^0.5.4",
     "gulp-util": "^3.0.6",
     "jsdom": "^6.5.1",
     "karma": "^0.13.10",
@@ -78,6 +79,7 @@
     "karma-sinon": "^1.0.4",
     "karma-sinon-chai": "^1.1.0",
     "mocha": "^2.3.3",
+    "require-dir": "^0.3.0",
     "sinon": "^1.17.1",
     "systemjs-builder": "^0.14.7"
   },
