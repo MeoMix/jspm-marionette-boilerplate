@@ -6,7 +6,7 @@ const requireDir = require('require-dir');
 global.paths = {
   'srcFiles': './src/**/*',
   'srcHtml': './src/**/*.html',
-  'srcJs': './src/js/**/*.js',
+  'srcJs': './src/**/*.js',
   'srcNonJs': ['./src/**/*', '!./src/**/*.js'],
   'allJs': ['./src/**/*.js', './test/**/*.js', './gulp/**/*.js', './gulpfile.babel.js'],
   'src': './src',

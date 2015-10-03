@@ -1,6 +1,7 @@
 ﻿const gulp = require('gulp');
 const babel = require('gulp-babel');
 const copy = require('gulp-copy');
+const changed = require('gulp-changed');
 
 // Create a directory, /compiled, and copy all files from /src into it.
 // While copying - transpile all ES6 JavaScript to ES5.
@@ -11,6 +12,8 @@ gulp.task('compile', ['babel', 'copy-srcNonJavaScript']);
 // Transpile ES6 files through babel and copy results to /compiled directory.
 gulp.task('babel', () => {
   return gulp.src(global.paths.srcJs)
+    // Don't waste time compiling files which have not changed.
+    .pipe(changed(global.paths.compiled))
     .pipe(babel({
       modules: 'system'
     }))
@@ -20,5 +23,10 @@ gulp.task('babel', () => {
 // Copy non-ES6 files (e.g. .css, .html, .hbs) to the /compiled directory.
 gulp.task('copy-srcNonJavaScript', () => {
   return gulp.src(global.paths.srcNonJs)
-    .pipe(copy(global.paths.compiled, { prefix: 1 }));
+    // Don't waste time copying files which have not changed.
+    .pipe(changed(global.paths.compiled))
+    .pipe(copy(global.paths.compiled, {
+      // prefix: 1 indicates the desire to drop the '/src' parent directory.
+      prefix: 1
+    }));
 });
