@@ -10,8 +10,8 @@ jspm_packages
 node_modules
 
 # Visual Studio
+.vs
 *.suo
 *.user
 obj
 bin
-*.config
