@@ -3,6 +3,5 @@ import { Application } from 'marionette';
 
 export default Application.extend({
   initialize() {
-
   }
 });

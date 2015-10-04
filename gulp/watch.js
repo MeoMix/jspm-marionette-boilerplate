@@ -1,12 +1,16 @@
 ﻿const gulp = require('gulp');
-const gutil = require('gulp-util');
+const path = require('path');
+const util = require('gulp-util');
 
 // Watch source files for changes. Run compile task when changes detected.
 gulp.task('watch', () => {
-  const watchTasks = ['compile'];
+  const logChanges = (event) => {
+    util.log(
+      util.colors.yellow(`${path.basename(event.path)}`) +
+      util.colors.green(` was ${event.type}, recompiling...`)
+    );
+  };
 
-  return gulp.watch(global.paths.srcFiles, watchTasks)
-    .on('change', (event) => {
-      gutil.log(gutil.colors.cyan(`${event.path} was ${event.type}, recompiling...`));
-    });
+  gulp.watch(global.paths.srcFiles, ['compile']).on('change', logChanges);
+  gulp.watch(global.paths.compiledFiles, ['connect-reloadCompiledFiles']).on('change', logChanges);
 });

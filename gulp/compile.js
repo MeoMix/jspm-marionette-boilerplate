@@ -7,13 +7,15 @@ const changed = require('gulp-changed');
 // While copying - transpile all ES6 JavaScript to ES5.
 // Use the /compiled directory instead of /src during development
 // to avoid waiting for ES6 to transpile.
-gulp.task('compile', ['babel', 'copy-srcNonJavaScript']);
+gulp.task('compile', ['compile-babelSrcJs', 'compile-copySrcNonJs']);
 
 // Transpile ES6 files through babel and copy results to /compiled directory.
-gulp.task('babel', () => {
+gulp.task('compile-babelSrcJs', () => {
   return gulp.src(global.paths.srcJs)
     // Don't waste time compiling files which have not changed.
-    .pipe(changed(global.paths.compiled))
+    .pipe(changed(global.paths.compiled, {
+      hasChanged: changed.compareSha1Digest
+    }))
     .pipe(babel({
       modules: 'system'
     }))
@@ -21,10 +23,12 @@ gulp.task('babel', () => {
 });
 
 // Copy non-ES6 files (e.g. .css, .html, .hbs) to the /compiled directory.
-gulp.task('copy-srcNonJavaScript', () => {
+gulp.task('compile-copySrcNonJs', () => {
   return gulp.src(global.paths.srcNonJs)
     // Don't waste time copying files which have not changed.
-    .pipe(changed(global.paths.compiled))
+    .pipe(changed(global.paths.compiled, {
+      hasChanged: changed.compareSha1Digest
+    }))
     .pipe(copy(global.paths.compiled, {
       // prefix: 1 indicates the desire to drop the '/src' parent directory.
       prefix: 1

@@ -67,6 +67,7 @@
   <ItemGroup>
     <Content Include="gulp\build.js" />
     <Content Include="gulp\compile.js" />
+    <Content Include="gulp\connect.js" />
     <Content Include="gulp\lint.js" />
     <Content Include="gulp\test.js" />
     <Content Include="gulp\watch.js" />

@@ -6,6 +6,8 @@ const Server = require('karma').Server;
 gulp.task('test', (done) => {
   const server = new Server({
     configFile: `${__dirname}/../karma.config.js`,
+    // Don't run in continuous integration mode.
+    // Just execute tests once and exit.
     singleRun: true
   }, done);
 
