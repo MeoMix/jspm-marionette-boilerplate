@@ -1,3 +1,19 @@
-﻿:local(.application) {
-  background-color: blue;
+﻿@import '../common/utility.css';
+
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+
+  font: 15px 'Roboto';
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+}
+
+:local(.application) {
+  display: flex;
+  flex: 1;
+  box-sizing: border-box;
 }

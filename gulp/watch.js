@@ -3,7 +3,7 @@ const path = require('path');
 const util = require('gulp-util');
 
 // Watch source files for changes. Run compile task when changes detected.
-gulp.task('watch', () => {
+gulp.task('watch', (done) => {
   const logChanges = (event) => {
     util.log(
       util.colors.yellow(`${path.basename(event.path)}`) +
@@ -13,4 +13,5 @@ gulp.task('watch', () => {
 
   gulp.watch(global.paths.srcFiles, ['compile']).on('change', logChanges);
   gulp.watch(global.paths.compiledFiles, ['connect-reloadCompiledFiles']).on('change', logChanges);
+  done();
 });

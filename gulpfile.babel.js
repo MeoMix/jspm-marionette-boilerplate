@@ -1,6 +1,7 @@
 ﻿/* eslint-env node */
 const gulp = require('gulp');
 const requireDir = require('require-dir');
+const runSequence = require('run-sequence');
 
 // Specify paths & globbing patterns for tasks.
 global.paths = {
@@ -18,4 +19,6 @@ global.paths = {
 // Require all tasks in the gulp folder.
 requireDir('./gulp', { recurse: false });
 
-gulp.task('default', ['compile', 'connect', 'watch']);
+gulp.task('default', (done) => {
+  runSequence('compile', 'connect', 'watch', done);
+});

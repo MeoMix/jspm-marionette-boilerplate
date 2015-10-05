@@ -2,25 +2,29 @@
 const connect = require('gulp-connect');
 const cached = require('gulp-cached');
 const open = require('gulp-open');
+const path = require('path');
 
 // Create a local server for hosting the project.
 // Responds to livereload commands so file changes don't require refreshing.
-gulp.task('connect', () => {
+gulp.task('connect', (done) => {
   const host = 'localhost';
   const port = 8080;
 
   connect.server({
     host,
     port,
-    root: './',
+    root: path.resolve('./'),
     livereload: true
   });
 
   // Open default browser to the compiled directory.
   // Presumably useful since a connect server was just spun up for development.
-  gulp.src('').pipe(open({
-    uri: `http://${host}:${port}/compiled/`
-  }));
+  gulp.src('')
+    .pipe(open({
+      uri: `http://${host}:${port}/compiled/`
+    }));
+
+  done();
 });
 
 // Inform the server it should reload certain files.

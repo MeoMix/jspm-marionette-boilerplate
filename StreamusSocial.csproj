@@ -19,6 +19,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -80,7 +81,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="src\application\application.css" />
-    <Content Include="src\index.css" />
+    <Content Include="src\application\applicationView.js" />
+    <Content Include="src\font\font.css" />
     <Content Include="src\index.html" />
     <Content Include="src\application\application.js" />
     <Content Include="src\common\utility.js" />
@@ -104,6 +106,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="gulp\.eslintrc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\application\application.hbs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\font\Roboto-Medium.ttf" />
+    <Content Include="src\font\Roboto-Regular.ttf" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
