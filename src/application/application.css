@@ -16,4 +16,6 @@ html, body {
   display: flex;
   flex: 1;
   box-sizing: border-box;
+  background-color: blue;
+  color: white;
 }

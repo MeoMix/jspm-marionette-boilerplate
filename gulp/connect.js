@@ -13,6 +13,8 @@ gulp.task('connect', (done) => {
   connect.server({
     host,
     port,
+    // Needs to be path.resolve and not just './'
+    // https://github.com/AveVlad/gulp-connect/issues/54
     root: path.resolve('./'),
     livereload: true
   });

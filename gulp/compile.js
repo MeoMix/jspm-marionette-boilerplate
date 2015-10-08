@@ -13,9 +13,8 @@ gulp.task('compile', ['compile-babelSrcJs', 'compile-copySrcNonJs']);
 gulp.task('compile-babelSrcJs', () => {
   return gulp.src(global.paths.srcJs)
     // Don't waste time compiling files which have not changed.
-    .pipe(changed(global.paths.compiled, {
-      hasChanged: changed.compareSha1Digest
-    }))
+    // Don't compare using sha1. Changed thinks all files changed when saving through Visual Studio.
+    .pipe(changed(global.paths.compiled))
     .pipe(babel({
       modules: 'system'
     }))
@@ -26,9 +25,8 @@ gulp.task('compile-babelSrcJs', () => {
 gulp.task('compile-copySrcNonJs', () => {
   return gulp.src(global.paths.srcNonJs)
     // Don't waste time copying files which have not changed.
-    .pipe(changed(global.paths.compiled, {
-      hasChanged: changed.compareSha1Digest
-    }))
+    // Don't compare using sha1. Changed thinks all files changed when saving through Visual Studio.
+    .pipe(changed(global.paths.compiled))
     .pipe(copy(global.paths.compiled, {
       // prefix: 1 indicates the desire to drop the '/src' parent directory.
       prefix: 1

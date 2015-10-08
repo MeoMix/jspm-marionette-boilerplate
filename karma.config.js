@@ -17,22 +17,18 @@ module.exports = function(config) {
       loadFiles: ['test/**/*.spec.js'],
       // serviceFiles makes additional files available for jspm to load,
       // but does not load immediately.
-      serveFiles: ['src/**/*.js', 'src/**/*.css']
+      serveFiles: ['src/**/*']
     },
 
     proxies: {
-      '/': '/base/'
+      '/src/': '/base/src/',
+      '/test/': '/base/test/',
+      '/jspm_packages/': '/base/jspm_packages/'
     },
 
     // list of files to exclude
     exclude: [
     ],
-
-    // preprocess matching files before serving them to the browser
-    // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
-    preprocessors: {
-
-    },
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
@@ -54,13 +50,11 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome', 'Firefox'],
+    browsers: ['Chrome'],
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
     singleRun: false,
-
-    urlRoot: '/_karma_/',
 
     customLaunchers: {
       Chrome_travis_ci: {
