@@ -1,21 +1,10 @@
-﻿@import '../common/utility.css';
+﻿@import '../common/css/core.css';
+@import '../common/css/utility.css';
 
-html, body {
-  padding: 0;
-  margin: 0;
-  height: 100%;
-
-  font: 15px 'Roboto';
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  -webkit-user-select: none;
-  -webkit-user-drag: none;
-}
-
-:local(.application) {
+.application {
   display: flex;
   flex: 1;
   box-sizing: border-box;
-  background-color: blue;
+  background-color: red;
   color: white;
 }

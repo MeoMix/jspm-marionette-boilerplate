@@ -1,17 +1,8 @@
-﻿// Karma configuration
-// Generated on Mon Sep 21 2015 13:40:47 GMT-0700 (Pacific Daylight Time)
-
-module.exports = function(config) {
+﻿module.exports = function(config) {
   var configuration = {
-
-    // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: '',
-
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
     frameworks: ['jspm', 'mocha', 'chai', 'sinon-chai'],
-
-    // list of files / patterns to load in the browser
 
     jspm: {
       loadFiles: ['test/**/*.spec.js'],
@@ -20,15 +11,15 @@ module.exports = function(config) {
       serveFiles: ['src/**/*']
     },
 
+    // Karma serves all files under a /base/ directory.
+    // This conflicts with the baseURL param provided through jspm's configuration file.
+    // So, proxy requests to known paths through /base/ to keep everything working.
+    // Don't proxy '/' because an infinite loop will occur when looking up non-trivial paths.
     proxies: {
       '/src/': '/base/src/',
       '/test/': '/base/test/',
       '/jspm_packages/': '/base/jspm_packages/'
     },
-
-    // list of files to exclude
-    exclude: [
-    ],
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
@@ -50,7 +41,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome'],
+    browsers: ['Chrome', 'Firefox'],
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
