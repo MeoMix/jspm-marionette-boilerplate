@@ -1,9 +1,5 @@
-﻿//
-// toJsonShim
-// Marionette v2.x Views use toJSON for serialization, which isn't
+﻿// Marionette v2.x Views use toJSON for serialization, which isn't
 // the intended use of that method. This resolves that problem.
-//
-
 import _ from 'lodash';
 import { View, ItemView } from 'marionette';
 

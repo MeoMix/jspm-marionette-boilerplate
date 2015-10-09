@@ -1,4 +1,6 @@
-﻿import _ from 'lodash';
+﻿// All regions should be tagged with a "data-region=name" attribute.
+// Make the lookup of regions by their data-region attribute implicit.
+import _ from 'lodash';
 import { Region, Error } from 'marionette';
 
 Region.buildRegion = function(regionConfig, DefaultRegionClass) {

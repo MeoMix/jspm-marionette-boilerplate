@@ -1,4 +1,7 @@
 ﻿/* eslint max-len: 0 */
+// All views should look up ui elements with a "data-ui~=name" attribute.
+// Make the lookup of ui elements by their data-ui attribute implicit.
+// Optionally allow the user to opt-out of this functionaliy via 'useCustomUiSelector' flag.
 import _ from 'lodash';
 import Marionette from 'marionette';
 
