@@ -1,10 +1,10 @@
 ﻿const gulp = require('gulp');
 const minifyHtml = require('gulp-minify-html');
 const useref = require('gulp-useref');
-const clean = require('gulp-clean');
 const runSequence = require('run-sequence');
 const Builder = require('systemjs-builder');
 const util = require('gulp-util');
+const del = require('del');
 const packageConfig = require('../package.json');
 
 gulp.task('build', (done) => {
@@ -15,8 +15,7 @@ gulp.task('build', (done) => {
 
 // Delete the contents of build location to ensure no build artifacts remain.
 gulp.task('build-cleanDist', () => {
-  return gulp.src(global.paths.dist, { read: false })
-    .pipe(clean());
+  return del(global.paths.dist);
 });
 
 // Move HTML from src to dest while transforming for production.

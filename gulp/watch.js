@@ -1,7 +1,7 @@
 ﻿const gulp = require('gulp');
 const path = require('path');
 const util = require('gulp-util');
-const clean = require('gulp-clean');
+const del = require('del');
 // https://github.com/gulpjs/gulp/blob/master/docs/API.md#eventtype
 const WatchEventType = {
   Added: 'added',
@@ -21,8 +21,7 @@ gulp.task('watch', (done) => {
   gulp.watch(global.paths.srcFiles, ['compile']).on('change', logChanges);
   gulp.watch(global.paths.srcFiles, (event) => {
     if (event.type === WatchEventType.Deleted) {
-      gulp.src(event.path.replace('src/', 'compiled/'))
-        .pipe(clean());
+      del(event.path.replace('src/', 'compiled/'));
     }
   });
   gulp.watch(global.paths.compiledFiles, ['connect-reloadCompiledFiles']).on('change', logChanges);
