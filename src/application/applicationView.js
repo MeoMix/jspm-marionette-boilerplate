@@ -6,6 +6,5 @@ export default LayoutView.extend({
   el: 'main',
   template,
   initialize() {
-    //this.el.classList.add(css.application);
   }
 });

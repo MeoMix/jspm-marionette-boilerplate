@@ -4,7 +4,6 @@
 .application {
   display: flex;
   flex: 1;
-  box-sizing: border-box;
   background-color: red;
   color: white;
 }

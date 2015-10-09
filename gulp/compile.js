@@ -14,7 +14,8 @@ gulp.task('compile', () => {
   const jsFilter = filter(['**/*.js'], { restore: true });
   // Exclude common css as it will have been inlined into modules.
   const cssFilter = filter(['**/*.css', '!**/common/css/*.css'], { restore: true });
-  const htmlFilter = filter(['**/*.+(html|hbs)']);
+  const htmlFilter = filter(['**/*.+(html|hbs)'], { restore: true });
+  const imgFilter = filter(['**/*.+(png|jpg|gif|svg)']);
   const postCssPlugins = [
     // From postcss-import notes: This plugin should probably be used as the first plugin of your list.
     atImport,
@@ -41,5 +42,10 @@ gulp.task('compile', () => {
     .pipe(cssFilter.restore)
     // Copy .html and .hbs files to destination.
     .pipe(htmlFilter)
+    .pipe(gulp.dest(global.paths.compiled))
+    .pipe(htmlFilter.restore)
+    // Copy .png, .jpg, .gif, and .svg files to destination.
+    .pipe(imgFilter)
+    .pipe(imagemin())
     .pipe(gulp.dest(global.paths.compiled));
 });

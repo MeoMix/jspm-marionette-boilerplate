@@ -1,7 +1,7 @@
 ﻿/* eslint-env node */
 // Options:
 // * gulp: Compile src files, spin-up local server, open browser, watch files for changes.
-// * gulp build: Build a release and place it into /dist.
+// * gulp build: Build a release from /compiled and place it into /dist.
 // * gulp compile: Move files from /src to /compiled while transpiling ES6 to ES5.
 // * gulp lint: Lint /src files for errors.
 // * gulp test: Instantiate a Karma server and run specs found in /test.
@@ -17,13 +17,11 @@ global.paths = {
   'allJs': ['src/**/*.js', 'test/**/*.js', 'gulp/**/*.js', 'gulpfile.babel.js'],
   'src': 'src/',
   'srcFiles': 'src/**/*',
-  'srcHtml': 'src/**/*.+(html|hbs)',
-  'srcJs': 'src/**/*.js',
-  'srcCss': 'src/**/*.css',
   'srcNonJs': ['src/**/*', '!src/**/*.js'],
   'compiled': 'compiled/',
   'compiledFiles': 'compiled/**/*',
-  'compiledHtml': 'src/**/*.html',
+  'compiledHtml': 'compiled/**/*.html',
+  'compiledImg': 'compiled/**/*.+(png|jpg|gif|svg)',
   'dist': 'dist/'
 };
 
