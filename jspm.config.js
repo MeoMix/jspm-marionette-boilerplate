@@ -1,5 +1,4 @@
 System.config({
-  baseURL: "/",
   defaultJSExtensions: true,
   transpiler: "babel",
   babelOptions: {
@@ -147,9 +146,9 @@ System.config({
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:postcss-safe-parser@1.0.1": {
-      "postcss": "npm:postcss@5.0.8"
+      "postcss": "npm:postcss@5.0.9"
     },
-    "npm:postcss@5.0.8": {
+    "npm:postcss@5.0.9": {
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "js-base64": "npm:js-base64@2.1.9",
       "path": "github:jspm/nodelibs-path@0.1.0",
