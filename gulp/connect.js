@@ -22,9 +22,7 @@ gulp.task('connect', (done) => {
 
   // Open default browser to the compiled or dist directory depending on build status.
   const directoryName = argv._[0] === 'build' ? 'dist' : 'compiled';
-  opn(`http://${host}:${port}/${directoryName}/`, function(error) {
-    console.log('Error:', error);
-  });
+  opn(`http://${host}:${port}/${directoryName}/`);
   done();
 });
 
