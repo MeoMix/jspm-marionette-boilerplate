@@ -23,14 +23,10 @@ System.config({
     "css": "github:systemjs/plugin-css@0.1.18",
     "handlebars": "github:components/handlebars.js@4.0.3",
     "hbs": "github:davis/plugin-hbs@1.2.1",
-    "html": "github:Hypercubed/systemjs-plugin-html@0.0.6",
     "jquery": "github:components/jquery@2.1.4",
     "lodash": "npm:lodash@3.10.1",
     "marionette": "github:marionettejs/backbone.marionette@2.4.3",
     "postcss-safe-parser": "npm:postcss-safe-parser@1.0.1",
-    "github:Hypercubed/systemjs-plugin-html@0.0.6": {
-      "webcomponentsjs": "github:webcomponents/webcomponentsjs@0.7.14"
-    },
     "github:davis/plugin-hbs@1.2.1": {
       "handlebars": "github:components/handlebars.js@4.0.3"
     },

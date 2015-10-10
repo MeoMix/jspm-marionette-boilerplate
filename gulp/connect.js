@@ -1,7 +1,7 @@
 ﻿const gulp = require('gulp');
 const connect = require('gulp-connect');
 const cached = require('gulp-cached');
-const open = require('open');
+const opn = require('opn');
 const path = require('path');
 const argv = require('yargs').argv;
 
@@ -22,7 +22,9 @@ gulp.task('connect', (done) => {
 
   // Open default browser to the compiled or dist directory depending on build status.
   const directoryName = argv._[0] === 'build' ? 'dist' : 'compiled';
-  open(`http://${host}:${port}/${directoryName}/`);
+  opn(`http://${host}:${port}/${directoryName}/`, function(error) {
+    console.log('Error:', error);
+  });
   done();
 });
 
