@@ -76,13 +76,18 @@
     <Content Include="package.json" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="src\common\shim\" />
+    <Folder Include="src\common\img\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="src\application\application.css" />
     <Content Include="src\application\applicationView.js" />
-    <Content Include="src\common\css.js" />
-    <Content Include="src\common\utility.css" />
+    <Content Include="src\common\css\core.css" />
+    <Content Include="src\common\css\reset.css" />
+    <Content Include="src\common\css\utility.css" />
+    <Content Include="src\common\shim\backbone.marionette.region.shim.js" />
+    <Content Include="src\common\shim\backbone.marionette.toJson.shim.js" />
+    <Content Include="src\common\shim\backbone.marionette.view.shim.js" />
+    <Content Include="src\common\shim\handlebars.helpers.shim.js" />
     <Content Include="src\index.html" />
     <Content Include="src\application\application.js" />
     <Content Include="src\common\utility.js" />

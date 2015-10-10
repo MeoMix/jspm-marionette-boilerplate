@@ -7,10 +7,12 @@ const util = require('gulp-util');
 const del = require('del');
 const packageConfig = require('../package.json');
 
+// Create a bundled distribution from the compiled directory and put it into the dist directory.
+// Ensure the dist directory is emptied before bundling to ensure no previous build artifacts remain.
+// Ensure compiled files are up-to-date from the src directory before generating a build from them.
 gulp.task('build', (done) => {
-  // Ensure cleaning dist directory happens before placing any files into it.
-  // Ensure compiled files are current before generating a build from them.
-  runSequence(['build-cleanDist', 'compile'], 'build-compiledHtml', 'build-compiledJs', done);
+  // Compile html before js to ensure that minified templates are inlined into compiled js files
+  runSequence(['build-cleanDist', 'compile'], 'build-compiledHtml', 'build-compiledJs', 'connect', done);
 });
 
 // Delete the contents of build location to ensure no build artifacts remain.
@@ -18,7 +20,7 @@ gulp.task('build-cleanDist', () => {
   return del(global.paths.dist);
 });
 
-// Move HTML from src to dest while transforming for production.
+// Move html from src to dest while transforming for production.
 gulp.task('build-compiledHtml', () => {
   return gulp.src(global.paths.compiledHtml)
     // Replace js references with a single reference to bundled js.

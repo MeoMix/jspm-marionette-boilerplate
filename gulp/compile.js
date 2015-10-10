@@ -3,6 +3,7 @@ const babel = require('gulp-babel');
 const changed = require('gulp-changed');
 const postcss = require('gulp-postcss');
 const filter = require('gulp-filter');
+const imagemin = require('gulp-imagemin');
 const autoprefixer = require('autoprefixer');
 const atImport = require('postcss-import');
 

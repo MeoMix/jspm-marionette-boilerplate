@@ -1,8 +1,9 @@
 ﻿const gulp = require('gulp');
 const connect = require('gulp-connect');
 const cached = require('gulp-cached');
-const open = require('gulp-open');
+const open = require('open');
 const path = require('path');
+const argv = require('yargs').argv;
 
 // Create a local server for hosting the project.
 // Responds to livereload commands so file changes don't require refreshing.
@@ -19,21 +20,16 @@ gulp.task('connect', (done) => {
     livereload: true
   });
 
-  // Open default browser to the compiled directory.
-  // Presumably useful since a connect server was just spun up for development.
-  gulp.src('')
-    .pipe(open({
-      uri: `http://${host}:${port}/compiled/`
-    }));
-
+  // Open default browser to the compiled or dist directory depending on build status.
+  const directoryName = argv._[0] === 'build' ? 'dist' : 'compiled';
+  open(`http://${host}:${port}/${directoryName}/`);
   done();
 });
 
-// Inform the server it should reload certain files.
+// Notify the connect server that it should reload files
+// from the compiled directory which have changed since last reload.
 gulp.task('connect-reloadCompiledFiles', () => {
   gulp.src(global.paths.compiledFiles)
-    // Don't reload all files because that would be slow.
-    // Instead, keep a cache of which files have changed. Only reload changed files.
     .pipe(cached('connect-reloadCompiledFiles'))
     .pipe(connect.reload());
 });
