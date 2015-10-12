@@ -8,7 +8,7 @@
 
 <h2>Overview</h2>
 
-This is an bare-bones, example application which highlights the usage of Marionette alongside JSPM. A full list of core libraries can be found below.
+This is a bare-bones, example application which highlights the usage of Marionette alongside JSPM. A full list of core libraries can be found below.
 
 <h2>Development</h2>
 
