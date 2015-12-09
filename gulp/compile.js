@@ -4,8 +4,9 @@ const changed = require('gulp-changed');
 const postcss = require('gulp-postcss');
 const filter = require('gulp-filter');
 const imagemin = require('gulp-imagemin');
-const autoprefixer = require('autoprefixer');
+const plumber = require('gulp-plumber');
 const atImport = require('postcss-import');
+const cssnext = require('postcss-cssnext');
 
 // Create a directory, /compiled, and copy all files from /src into it.
 // Transpile ES6 to ES5 while copying and apply postCSS plugins against CSS.
@@ -20,12 +21,11 @@ gulp.task('compile', () => {
   const postCssPlugins = [
     // From postcss-import notes: This plugin should probably be used as the first plugin of your list.
     atImport,
-    autoprefixer({
-      browsers: ['last 2 versions']
-    })
+    cssnext()
   ];
 
   return gulp.src(global.paths.srcFiles)
+    .pipe(plumber())
     // Don't waste time compiling files which have not changed.
     // Don't compare using sha1. Changed thinks all files changed when saving through Visual Studio.
     .pipe(changed(global.paths.compiled))
