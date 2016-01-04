@@ -1,4 +1,24 @@
-﻿module.exports = function(config) {
+﻿/* global process */
+var fs = require('fs');
+var path = require('path');
+var _ = require('lodash');
+
+// Determine all potential paths which need to be proxied by KarmaJS
+// Replace requests to '/proxyTarget' with '/base/proxyTarget'
+var proxyTargets = fs.readdirSync('compiled/').filter(function(file) {
+  return fs.statSync(path.join('compiled/', file)).isDirectory();
+});
+
+var base = '/base/compiled';
+var proxyValues = _.map(proxyTargets, function(proxyTarget) {
+  return base + '/' + proxyTarget + '/';
+});
+
+var proxies = _.indexBy(proxyValues, function(proxyValue) {
+  return proxyValue.replace(base, '');
+});
+
+module.exports = function(config) {
   var configuration = {
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
@@ -6,20 +26,27 @@
 
     jspm: {
       loadFiles: ['test/**/*.spec.js'],
-      // serviceFiles makes additional files available for jspm to load,
+      // serveFiles makes additional files available for jspm to load,
       // but does not load immediately.
-      serveFiles: ['src/**/*']
+      serveFiles: ['compiled/**/*'],
+      paths: {
+        // Need to redirect a path such as 'common/route' to 'base/compiled/common/route'
+        '*': 'base/compiled/*',
+        // Tests aren't located under compiled directory. Undo the above path modification.
+        'compiled/*': 'compiled/*',
+        'test/*': 'test/*'
+      }
     },
 
     // Karma serves all files under a /base/ directory.
     // This conflicts with the baseURL param provided through jspm's configuration file.
     // So, proxy requests to known paths through /base/ to keep everything working.
     // Don't proxy '/' because an infinite loop will occur when looking up non-trivial paths.
-    proxies: {
-      '/src/': '/base/src/',
+    proxies: _.defaults({
+      '/compiled/': '/base/compiled/',
       '/test/': '/base/test/',
       '/jspm_packages/': '/base/jspm_packages/'
-    },
+    }, proxies),
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
@@ -45,7 +72,7 @@
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: false,
+    singleRun: true,
 
     customLaunchers: {
       Chrome_travis_ci: {
@@ -63,4 +90,4 @@
   }
 
   config.set(configuration);
-};
+}

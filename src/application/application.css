@@ -1,9 +1,10 @@
-﻿@import '../common/css/core.css';
-@import '../common/css/utility.css';
+﻿/* css.js will parse out this at declaration and use it as the traits path. */
+@traits('common/css/traits/');
 
-.application {
-  display: flex;
-  flex: 1;
-  background-color: red;
-  color: white;
+/* :local informs css.js that this css declaration is a module which should be imported and is not global. */
+/* :traits informs css.js that attributes inside of this module should be looked up through traits imports. */
+:local(.application:traits) {
+  flex: flex;
+  flexChild: grow;
+  color: primary;
 }

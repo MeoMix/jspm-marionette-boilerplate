@@ -62,28 +62,33 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
-    <Content Include="gulpfile.babel.js" />
+    <Content Include="gulpfile.js" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="gulp\build.js" />
-    <Content Include="gulp\compile.js" />
-    <Content Include="gulp\connect.js" />
-    <Content Include="gulp\lint.js" />
-    <Content Include="gulp\test.js" />
-    <Content Include="gulp\watch.js" />
-    <Content Include="jspm.config.js" />
+    <Content Include="gulp\globFilter.js" />
+    <Content Include="gulp\tasks\build.js" />
+    <Content Include="gulp\tasks\compile.js" />
+    <Content Include="gulp\tasks\connect.js" />
+    <Content Include="gulp\tasks\default.js" />
+    <Content Include="gulp\tasks\lint.js" />
+    <Content Include="gulp\tasks\test.js" />
+    <Content Include="gulp\tasks\watch.js" />
+    <Content Include="jspm\css.js" />
+    <Content Include="jspm\jspm.config.js" />
     <Content Include="karma.config.js" />
     <Content Include="package.json" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="src\common\img\" />
+    <Folder Include="jspm\jspm_packages\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="src\application\application.css" />
     <Content Include="src\application\applicationView.js" />
+    <Content Include="src\common\css\traits\color.css" />
     <Content Include="src\common\css\core.css" />
     <Content Include="src\common\css\reset.css" />
-    <Content Include="src\common\css\utility.css" />
+    <Content Include="src\common\css\traits\flex.css" />
+    <Content Include="src\common\css\traits\flexChild.css" />
     <Content Include="src\common\shim\backbone.marionette.region.shim.js" />
     <Content Include="src\common\shim\backbone.marionette.toJson.shim.js" />
     <Content Include="src\common\shim\backbone.marionette.view.shim.js" />
@@ -138,6 +143,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
+      <UserProperties package_1json__JSONSchema="" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
