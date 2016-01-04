@@ -1,18 +1,18 @@
 {
-  "name": "Streamus",
+  "name": "jspm-marionette-boilerplate",
   "version": "0.0.1",
   "private": true,
-  "description": "Website for listening to music",
-  "license": "Apache License v2.0",
+  "description": "A demo project highlighting usage of JSPM w/ Backbone.Marionette",
+  "license": "MIT",
   "author": "Sean Anderson",
   "repository": {
     "type": "git",
-    "url": "https://github.com/MeoMix/StreamusSocial.git"
+    "url": "https://github.com/MeoMix/jspm-marionette-boilerplate.git"
   },
   "bugs": {
-    "url": "https://github.com/MeoMix/StreamusSocial/issues"
+    "url": "https://github.com/MeoMix/jspm-marionette-boilerplate/issues"
   },
-  "homepage": "https://github.com/MeoMix/StreamusSocial",
+  "homepage": "https://github.com/MeoMix/jspm-marionette-boilerplate",
   "scripts": {
     "test": "gulp test",
     "postinstall": "jspm install"
