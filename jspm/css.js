@@ -1,5 +1,5 @@
 ﻿// NOTE: CSS Minification not supported until jspm v0.17.
-// https://github.com/MeoMix/StreamusSocial/issues/12
+// https://github.com/MeoMix/jspm-marionette-boilerplate/issues/12
 import { CSSLoader, Plugins } from 'jspm-loader-css';
 
 // Make life easier by automating away most of the boilerplate for using traits.

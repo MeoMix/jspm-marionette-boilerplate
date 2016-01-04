@@ -16,7 +16,7 @@ gulp.task('build', function(done) {
     // Cleaning and compilation can run in parallel.
     ['build:cleanDist', 'compile'],
     // NOTE: Minification of hbs not currently supported.
-    // https://github.com/MeoMix/StreamusSocial/issues/14
+    // https://github.com/MeoMix/jspm-marionette-boilerplate/issues/14
     // Compile html before js to ensure minified templates are inlined into js files.
     'build:transformHtml',
     'build:transformJs',
