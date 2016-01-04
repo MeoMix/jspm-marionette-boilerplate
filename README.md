@@ -60,3 +60,6 @@ You may run tests locally through Karma via the command line: `gulp test`
 
 <h2>Authors</h2>
 * [MeoMix](https://github.com/MeoMix)
+
+
+[![Join the chat at https://gitter.im/MeoMix/jspm-marionette-boilerplate](https://badges.gitter.im/MeoMix/jspm-marionette-boilerplate.svg)](https://gitter.im/MeoMix/jspm-marionette-boilerplate?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
