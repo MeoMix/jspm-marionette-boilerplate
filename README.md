@@ -4,6 +4,9 @@
   <a title='Build Status' href="https://travis-ci.org/MeoMix/jspm-marionette-boilerplate">
     <img src='https://travis-ci.org/MeoMix/jspm-marionette-boilerplate.svg?branch=development' />
   </a>
+  <a title='Join the chat at https://gitter.im/MeoMix/jspm-marionette-boilerplate' href='https://gitter.im/MeoMix/jspm-marionette-boilerplate?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge'>
+    <img src='https://badges.gitter.im/MeoMix/jspm-marionette-boilerplate.svg' />
+  </a>
 </p>
 
 <h2>Overview</h2>
@@ -60,6 +63,3 @@ You may run tests locally through Karma via the command line: `gulp test`
 
 <h2>Authors</h2>
 * [MeoMix](https://github.com/MeoMix)
-
-
-[![Join the chat at https://gitter.im/MeoMix/jspm-marionette-boilerplate](https://badges.gitter.im/MeoMix/jspm-marionette-boilerplate.svg)](https://gitter.im/MeoMix/jspm-marionette-boilerplate?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
