@@ -15,7 +15,7 @@ This is a bare bones, example application which highlights the usage of Marionet
 Start by cloning the development branch. All PRs should be submitted to the development branch.
 
 <h3>Dependencies</h3>
-You will need to have [Node](https://nodejs.org/), [Gulp](http://gulpjs.com/), [jspm](http://jspm.io/), and Git(https://git-scm.com/) installed on your system.
+You will need to have [Node](https://nodejs.org/), [Gulp](http://gulpjs.com/), [jspm](http://jspm.io/), and [Git](https://git-scm.com/) installed on your system.
 After installing Node, navigate using a terminal to the directory in which you cloned Streamus. Then, perform the following command to install dependencies:
 
 * `npm install -g gulp`
