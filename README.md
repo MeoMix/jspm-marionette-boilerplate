@@ -1,14 +1,14 @@
-<h1 align="center">Streamus Social</h1>
+<h1 align="center">JSPM Marionette Boilerplate</h1>
 <p align="center">...</p>
 <p align="center">
-  <a title='Build Status' href="https://travis-ci.org/MeoMix/StreamusSocial">
-    <img src='https://travis-ci.org/MeoMix/StreamusSocial.svg?branch=development' />
+  <a title='Build Status' href="https://travis-ci.org/MeoMix/jspm-marionette-boilerplate">
+    <img src='https://travis-ci.org/MeoMix/jspm-marionette-boilerplate.svg?branch=development' />
   </a>
 </p>
 
 <h2>Overview</h2>
 
-This is a bare-bones, example application which highlights the usage of Marionette alongside JSPM. A full list of core libraries can be found below.
+This is a bare bones, example application which highlights the usage of Marionette alongside JSPM. A full list of core libraries can be found below.
 
 <h2>Development</h2>
 
@@ -48,6 +48,7 @@ You may run tests locally through Karma via the command line: `gulp test`
 * [Babel](https://babeljs.io/)
 * [Gulp](http://gulpjs.com/)
 * [Handlebars](http://handlebarsjs.com/)
+* [CSSModules](http://glenmaddern.com/articles/css-modules)
 
 <h3>Testing</h3>
 * [Karma](http://karma-runner.github.io/)
