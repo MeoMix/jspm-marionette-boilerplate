@@ -1,5 +1,5 @@
 <h1 align="center">JSPM Marionette Boilerplate</h1>
-<p align="center">...</p>
+<p align="center">JSPM + Backbone/Marionette + CSS Modules</p>
 <p align="center">
   <a title='Build Status' href="https://travis-ci.org/MeoMix/jspm-marionette-boilerplate">
     <img src='https://travis-ci.org/MeoMix/jspm-marionette-boilerplate.svg?branch=development' />
