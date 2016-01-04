@@ -16,11 +16,13 @@ Start by cloning the development branch. All PRs should be submitted to the deve
 
 <h3>Dependencies</h3>
 You will need to have [Node](https://nodejs.org/), [Gulp](http://gulpjs.com/), [jspm](http://jspm.io/), and [Git](https://git-scm.com/) installed on your system.
-After installing Node, navigate using a terminal to the directory in which you cloned Streamus. Then, perform the following command to install dependencies:
+After installing Node, navigate using a terminal to the directory in which you cloned this repository. Then, perform the following command to install dependencies:
 
-* `npm install -g gulp`
-* `npm install -g jspm`
-* `npm install`
+```
+npm install -g gulp
+npm install -g jspm
+npm install
+```
 
 You may encounter an error when attempting to install [node-gyp](https://github.com/nodejs/node-gyp) which is a dependency of Karma.
 Details on how to resolve dependency issues for `node-gyp` can be found [on StackOverflow](http://stackoverflow.com/a/21366601/633438)
