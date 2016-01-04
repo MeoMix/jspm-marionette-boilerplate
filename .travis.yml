@@ -1,7 +1,8 @@
+## sudo: true is required to install latest Chrome
 sudo: true
 language: node_js
 node_js:
-  - 4.1
+  - 'stable'
 env:
   global:
     ## node-gyp under node 4.x requires newer version of C++ compiler
@@ -27,6 +28,7 @@ before_install:
   - sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
   - sudo apt-get update -qq
   - sudo apt-get install -qq google-chrome-stable
+  ## Point to the latest Chrome install to prevent using stale version.
   - export CHROME_BIN=/usr/bin/google-chrome-stable
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
