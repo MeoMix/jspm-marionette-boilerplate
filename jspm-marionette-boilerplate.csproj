@@ -12,7 +12,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>StreamusSocial</RootNamespace>
-    <AssemblyName>StreamusSocial</AssemblyName>
+    <AssemblyName>jspm-marionette-boilerplate</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -65,7 +65,7 @@
     <Content Include="gulpfile.js" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="gulp\globFilter.js" />
+    <Content Include="gulp\glob.js" />
     <Content Include="gulp\tasks\build.js" />
     <Content Include="gulp\tasks\compile.js" />
     <Content Include="gulp\tasks\connect.js" />

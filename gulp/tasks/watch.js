@@ -2,7 +2,7 @@
 var path = require('path');
 var util = require('gulp-util');
 var del = require('del');
-var GlobFilter = require('../globFilter.js');
+var Glob = require('../glob.js');
 // https://github.com/gulpjs/gulp/blob/master/docs/API.md#eventtype
 var WatchEventType = {
   Added: 'added',
@@ -23,11 +23,11 @@ gulp.task('watch', function(done) {
     if (event.type === WatchEventType.Deleted) {
       var compiledPath = '';
 
-      if (event.path.indexOf(GlobFilter.Src) !== -1) {
-        compiledPath = event.path.replace(GlobFilter.Src, GlobFilter.Compiled);
-      } else if (event.path.indexOf(GlobFilter.Jspm) !== -1) {
+      if (event.path.indexOf(Glob.Src) !== -1) {
+        compiledPath = event.path.replace(Glob.Src, Glob.Compiled);
+      } else if (event.path.indexOf(Glob.Jspm) !== -1) {
         // jspm's directory structure changes when moving into compiled.
-        compiledPath = event.path.replace(GlobFilter.Jspm, GlobFilter.Compiled + '\\' + GlobFilter.Jspm);
+        compiledPath = event.path.replace(Glob.Jspm, Glob.Compiled + '\\' + Glob.Jspm);
       } else {
         throw new Error('Unexpected path:' + event.path);
       }
@@ -36,16 +36,16 @@ gulp.task('watch', function(done) {
     }
   };
 
-  gulp.watch(GlobFilter.SrcFolder + GlobFilter.AllFiles, ['compile:transformSrc']).on('change', onFileChange);
+  gulp.watch(Glob.SrcFolder + Glob.AllFiles, ['compile:transformSrc']).on('change', onFileChange);
   gulp.watch([
-    GlobFilter.JspmFolder + GlobFilter.AllFiles,
+    Glob.JspmFolder + Glob.AllFiles,
     // It's too slow to watch jspm packages for changes. Increases watch task time by ~20s
-    '!' + GlobFilter.JspmFolder + GlobFilter.JspmPackagesFolder + GlobFilter.AllFiles
+    '!' + Glob.JspmFolder + Glob.JspmPackagesFolder + Glob.AllFiles
   ], ['compile:copyJspmFolder']).on('change', onFileChange);
   gulp.watch([
-    GlobFilter.CompiledFolder + GlobFilter.AllFiles,
+    Glob.CompiledFolder + Glob.AllFiles,
     // It's too slow to watch jspm packages for changes. Increases watch task time by ~20s
-    '!' + GlobFilter.CompiledFolder + GlobFilter.JspmFolder + GlobFilter.JspmPackagesFolder + GlobFilter.AllFiles
+    '!' + Glob.CompiledFolder + Glob.JspmFolder + Glob.JspmPackagesFolder + Glob.AllFiles
   ], ['connect:reloadCompiledFiles']);
   done();
 });

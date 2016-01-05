@@ -6,7 +6,7 @@ var Builder = require('systemjs-builder');
 var util = require('gulp-util');
 var del = require('del');
 var imagemin = require('gulp-imagemin');
-var GlobFilter = require('../globFilter.js');
+var Glob = require('../glob.js');
 
 // Create a bundled distribution from the compiled directory and put it into the dist directory.
 // Ensure the dist directory is emptied before bundling to ensure no previous build artifacts remain.
@@ -28,14 +28,14 @@ gulp.task('build', function(done) {
 
 // Delete the contents of build location to ensure no build artifacts remain.
 gulp.task('build:cleanDist', function() {
-  return del(GlobFilter.DistFolder);
+  return del(Glob.DistFolder);
 });
 
 // Move html from src to dest while transforming for production.
 gulp.task('build:transformHtml', function() {
   return gulp.src([
-    GlobFilter.CompiledFolder + GlobFilter.AllHtml,
-    '!' + GlobFilter.CompiledFolder + GlobFilter.JspmFolder + GlobFilter.AllHtml
+    Glob.CompiledFolder + Glob.AllHtml,
+    '!' + Glob.CompiledFolder + Glob.JspmFolder + Glob.AllHtml
   ])
     // Replace js references with a single reference to bundled js.
     .pipe(useref({
@@ -47,14 +47,14 @@ gulp.task('build:transformHtml', function() {
       removeComments: true,
       collapseWhitespace: true
     }))
-    .pipe(gulp.dest(GlobFilter.DistFolder));
+    .pipe(gulp.dest(Glob.DistFolder));
 });
 
 // Use jspm's builder to create a self-executing bundle of files.
 // Written to a destination directory and ready for production use.
 gulp.task('build:transformJs', function(done) {
   // More information on using SystemJS builder here: https://github.com/systemjs/builder
-  const builder = new Builder(GlobFilter.CompiledFolder, GlobFilter.JspmConfigFile);
+  const builder = new Builder(Glob.CompiledFolder, Glob.JspmConfigFile);
   const options = {
     // Don't include runtime because any dependencies on System are incorrect.
     // A properly built distribution should not need to run System at runtime.
@@ -64,9 +64,9 @@ gulp.task('build:transformJs', function(done) {
     minify: true
   };
 
-  builder.buildStatic('main.js', GlobFilter.DistFolder + 'main.js', options)
+  builder.buildStatic('main.js', Glob.DistFolder + 'main.js', options)
     .then(function() {
-      util.log(util.colors.green('Built successfully to ' + GlobFilter.DistFolder));
+      util.log(util.colors.green('Built successfully to ' + Glob.DistFolder));
     })
     .catch(function(errorMessage) {
       util.log(util.colors.red(errorMessage));
@@ -78,22 +78,22 @@ gulp.task('build:transformJs', function(done) {
 
 gulp.task('build:minifyImages', function() {
   return gulp.src([
-    GlobFilter.CompiledFolder + GlobFilter.AllImages,
-    '!' + GlobFilter.CompiledFolder + GlobFilter.JspmFolder + GlobFilter.AllImages
+    Glob.CompiledFolder + Glob.AllImages,
+    '!' + Glob.CompiledFolder + Glob.JspmFolder + Glob.AllImages
   ])
     .pipe(imagemin())
-    .pipe(gulp.dest(GlobFilter.DistFolder));
+    .pipe(gulp.dest(Glob.DistFolder));
 });
 
 gulp.task('build:copyFonts', function() {
   return gulp.src([
-    GlobFilter.CompiledFolder + GlobFilter.AllFonts,
-    '!' + GlobFilter.CompiledFolder + GlobFilter.JspmFolder + GlobFilter.AllFonts
+    Glob.CompiledFolder + Glob.AllFonts,
+    '!' + Glob.CompiledFolder + Glob.JspmFolder + Glob.AllFonts
   ])
-    .pipe(gulp.dest(GlobFilter.DistFolder));
+    .pipe(gulp.dest(Glob.DistFolder));
 });
 
 gulp.task('build:copyAssets', function() {
-  return gulp.src(GlobFilter.CompiledFolder + GlobFilter.Assets, { dot: true })
-    .pipe(gulp.dest(GlobFilter.DistFolder));
+  return gulp.src(Glob.CompiledFolder + Glob.Assets, { dot: true })
+    .pipe(gulp.dest(Glob.DistFolder));
 });
