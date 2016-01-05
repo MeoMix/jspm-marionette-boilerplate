@@ -21,7 +21,7 @@ gulp.task('watch', function(done) {
 
     // Clean-up deleted files manually by finding and removing their counterpart.
     if (event.type === WatchEventType.Deleted) {
-      var compiledPath = '';
+      var compiledPath;
 
       if (event.path.indexOf(Glob.Src) !== -1) {
         compiledPath = event.path.replace(Glob.Src, Glob.Compiled);
