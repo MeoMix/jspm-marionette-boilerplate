@@ -9,24 +9,14 @@ import { CSSLoader, Plugins } from 'jspm-loader-css';
 // }
 // 
 // NEW:
-// @traits('../common/css/traits/');
-// 
 // :local(.foo:traits) {
 //   color: primary;
 // }
 
 let traits = (css) => {
-  // Find our path to the trait files
-  let traitPath;
   const isBundling = typeof window === 'undefined';
-
-  css.walkAtRules('traits', rule => {
-    // Assume that traits path is from root.
-    traitPath = '/' + (isBundling ? 'compiled/' : '' ) + rule.params.replace(/^\(['"]|['"]\)$/g, '');
-    rule.remove();
-  });
-
-  if (!traitPath) return;
+  const rootDir = isBundling ? 'compiled/' : '';
+  const traitPath = `${rootDir}common/css/traits/`;
 
   const traitRegexp = /\:traits/;
   // Translate any .module:traits usages

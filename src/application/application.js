@@ -6,7 +6,7 @@ import 'common/shim/backbone.marionette.toJson.shim';
 import 'common/shim/backbone.marionette.view.shim';
 // Load global CSS reset to standardize CSS across browsers.
 import 'common/css/reset.css!';
-// Load core CSS which isn't specific to a given module.
+//// Load core CSS which isn't specific to a given module.
 import 'common/css/core.css!';
 import { Application } from 'marionette';
 import ApplicationView from './applicationView';
