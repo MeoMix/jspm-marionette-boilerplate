@@ -9,7 +9,7 @@ var test = 'test';
 // An enumeration of common, reusable glob filters.
 // Mix these into minimatch expressions instead of using hardcoded strings.
 module.exports = {
-  AllFiles: '**/*',
+  AllFiles: '**/*.*',
   AllFonts: '**/*.+(eot|ttf|woff|woff2|otf)',
   AllImages: '**/*.+(png|jpg|gif|svg|bmp)',
   AllHtml: '**/*.html',

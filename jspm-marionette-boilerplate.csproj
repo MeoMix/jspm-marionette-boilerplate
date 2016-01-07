@@ -93,6 +93,8 @@
     <Content Include="src\common\shim\backbone.marionette.toJson.shim.js" />
     <Content Include="src\common\shim\backbone.marionette.view.shim.js" />
     <Content Include="src\common\shim\handlebars.helpers.shim.js" />
+    <Content Include="src\header\header.css" />
+    <Content Include="src\header\headerView.js" />
     <Content Include="src\index.html" />
     <Content Include="src\application\application.js" />
     <Content Include="src\common\utility.js" />
@@ -119,6 +121,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="src\application\application.hbs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\header\header.hbs" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

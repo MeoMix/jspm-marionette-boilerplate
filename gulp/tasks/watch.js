@@ -2,6 +2,7 @@
 var path = require('path');
 var util = require('gulp-util');
 var del = require('del');
+var connect = require('gulp-connect');
 var Glob = require('../glob.js');
 // https://github.com/gulpjs/gulp/blob/master/docs/API.md#eventtype
 var WatchEventType = {
@@ -46,6 +47,9 @@ gulp.task('watch', function(done) {
     Glob.CompiledFolder + Glob.AllFiles,
     // It's too slow to watch jspm packages for changes. Increases watch task time by ~20s
     '!' + Glob.CompiledFolder + Glob.JspmFolder + Glob.JspmPackagesFolder + Glob.AllFiles
-  ], ['connect:reloadCompiledFiles']);
+  ]).on('change', function(event) {
+    gulp.src(event.path)
+      .pipe(connect.reload());
+  });
   done();
 });

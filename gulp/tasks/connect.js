@@ -1,7 +1,6 @@
 ﻿var gulp = require('gulp');
 var connect = require('gulp-connect');
 var pushState = require('connect-pushstate');
-var cached = require('gulp-cached');
 var opn = require('opn');
 var path = require('path');
 var argv = require('yargs').argv;
@@ -22,6 +21,8 @@ gulp.task('connect', function(done) {
     // https://github.com/AveVlad/gulp-connect/issues/54
     root: path.resolve('./' + directoryName),
     livereload: true,
+    liveCSS: false,
+    liveJs: false,
     middleware: function() {
       return [pushState()];
     }
@@ -29,12 +30,4 @@ gulp.task('connect', function(done) {
 
   opn('http://' + host + ':' + port + '/');
   done();
-});
-
-// Notify the connect server that it should reload files
-// from the compiled directory which have changed since last reload.
-gulp.task('connect:reloadCompiledFiles', function() {
-  gulp.src(Glob.CompiledFolder + Glob.AllFiles)
-    .pipe(cached('connect:reloadCompiledFiles'))
-    .pipe(connect.reload());
 });
