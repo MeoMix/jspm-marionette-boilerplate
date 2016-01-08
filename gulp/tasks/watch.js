@@ -1,8 +1,8 @@
 ﻿var gulp = require('gulp');
 var path = require('path');
 var util = require('gulp-util');
-var del = require('del');
 var connect = require('gulp-connect');
+var del = require('del');
 var Glob = require('../glob.js');
 // https://github.com/gulpjs/gulp/blob/master/docs/API.md#eventtype
 var WatchEventType = {
