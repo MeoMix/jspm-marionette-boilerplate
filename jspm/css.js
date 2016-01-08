@@ -5,12 +5,12 @@ import values from 'postcss-modules-values';
 
 // Make life easier by automating away most of the boilerplate for using traits.
 // OLD:
-// :local(.foo) {
+// .foo {
 //   composes: primary from '../common/css/traits/color.css';
 // }
 // 
 // NEW:
-// :local(.foo:traits) {
+// .foo:traits {
 //   color: primary;
 // }
 

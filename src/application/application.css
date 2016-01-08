@@ -1,5 +1,4 @@
-﻿/* :local informs css.js that this css declaration is a module which should be imported and is not global. */
-/* :traits informs css.js that attributes inside of this module should be looked up through traits imports. */
+﻿/* :traits informs css.js that attributes inside of this module should be looked up through traits imports. */
 .application:traits {
   flex: flex;
   flexChild: grow;

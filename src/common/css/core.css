@@ -4,9 +4,14 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 :root {
   min-height: 100%;
-  font: 15px 'Roboto';
+  /* Use percentage to allow for browser to describe initial font-size. */
+  font: 87.5% 'Roboto';
   -webkit-font-smoothing: subpixel-antialiased;
   text-rendering: optimizeLegibility;
 }
