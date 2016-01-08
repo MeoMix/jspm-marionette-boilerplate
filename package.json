@@ -32,6 +32,7 @@
       "jspm-loader-css": "github:MeoMix/jspm-loader-css@^1.0.2",
       "lodash": "npm:lodash@^3.10.1",
       "marionette": "github:marionettejs/backbone.marionette@^2.4.3",
+      "postcss-modules-values": "npm:postcss-modules-values@^1.1.1",
       "text": "github:systemjs/plugin-text@^0.0.4"
     },
     "devDependencies": {

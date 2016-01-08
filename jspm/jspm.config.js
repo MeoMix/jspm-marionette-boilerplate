@@ -27,6 +27,7 @@ System.config({
     "jspm-loader-css": "github:MeoMix/jspm-loader-css@1.0.3",
     "lodash": "npm:lodash@3.10.1",
     "marionette": "github:marionettejs/backbone.marionette@2.4.4",
+    "postcss-modules-values": "npm:postcss-modules-values@1.1.1",
     "text": "github:systemjs/plugin-text@0.0.4",
     "github:MeoMix/jspm-loader-css@1.0.3": {
       "css-modules-loader-core": "npm:css-modules-loader-core@1.0.0",
@@ -131,6 +132,10 @@ System.config({
       "icss-replace-symbols": "npm:icss-replace-symbols@1.0.2",
       "postcss": "npm:postcss@5.0.10"
     },
+    "npm:postcss-modules-values@1.1.1": {
+      "icss-replace-symbols": "npm:icss-replace-symbols@1.0.2",
+      "postcss": "npm:postcss@5.0.14"
+    },
     "npm:postcss@5.0.10": {
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "js-base64": "npm:js-base64@2.1.9",
@@ -139,6 +144,14 @@ System.config({
       "source-map": "npm:source-map@0.5.3",
       "supports-color": "npm:supports-color@3.1.2",
       "systemjs-json": "github:systemjs/plugin-json@0.1.0"
+    },
+    "npm:postcss@5.0.14": {
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "js-base64": "npm:js-base64@2.1.9",
+      "path": "github:jspm/nodelibs-path@0.1.0",
+      "process": "github:jspm/nodelibs-process@0.1.2",
+      "source-map": "npm:source-map@0.5.3",
+      "supports-color": "npm:supports-color@3.1.2"
     },
     "npm:process@0.11.2": {
       "assert": "github:jspm/nodelibs-assert@0.1.0"

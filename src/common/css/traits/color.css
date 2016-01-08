@@ -1,7 +1,10 @@
-﻿.primary {
-  color: blue;
+﻿@value primaryBlue: rgb(66,133,244);
+@value secondaryRed: rgb(219,68,55);
+
+.primary {
+  color: primaryBlue;
 }
 
 .secondary {
-  color: red;
+  color: secondaryRed;
 }
