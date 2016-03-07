@@ -1,6 +1,7 @@
 ﻿// NOTE: CSS Minification not supported until jspm v0.17.
 // https://github.com/MeoMix/jspm-marionette-boilerplate/issues/12
-import { CSSLoader, Plugins } from 'jspm-loader-css';
+import { Plugins } from 'jspm-loader-css/lib/plugins'
+import { CSSLoader } from 'jspm-loader-css/lib/CSSLoader'
 import values from 'postcss-modules-values';
 
 // Make life easier by automating away most of the boilerplate for using traits.
@@ -37,8 +38,7 @@ let plugins = [
   values,
   Plugins.localByDefault,
   Plugins.extractImports,
-  Plugins.scope,
-  Plugins.autoprefixer()
+  Plugins.scope
 ];
 
 let { fetch, bundle } = new CSSLoader(plugins, __moduleName);

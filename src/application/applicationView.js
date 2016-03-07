@@ -1,7 +1,7 @@
 ﻿import { LayoutView } from 'marionette';
-import styles from './application.css!';
-import template from './application.hbs!';
-import HeaderView from 'header/headerView';
+import styles from './application.css';
+import template from './application.hbs';
+import HeaderView from 'header/headerView.js';
 
 export default LayoutView.extend({
   el: 'main',

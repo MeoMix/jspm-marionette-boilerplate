@@ -1,6 +1,10 @@
 ﻿/* :traits informs css.js that attributes inside of this module should be looked up through traits imports. */
-.application:traits {
+/*.application:traits {
   flex: flex;
   flexChild: grow;
   color: primary;
+}*/
+
+.test {
+  composes: foo from './test.css';
 }
