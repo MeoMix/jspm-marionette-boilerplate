@@ -1,4 +1,10 @@
-﻿*,
+﻿/* @import rule will be inlined via postcss-import.
+  It is necessary to use @import to ensure reset.css is interpreted before core.css
+*/
+@import './reset.css';
+
+
+*,
 *::before,
 *::after {
   box-sizing: border-box;
@@ -6,12 +12,39 @@
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
-:root {
-  min-height: 100%;
+/* Reset input elements to sane starting values. Allows for easier styling to fit Material Design principles. */
+input[type='submit'] {
+  border: none;
+}
+
+input {
+  outline: none;
+  font: inherit;
+  color: inherit;
+  text-rendering: inherit;
+}
+
+/* <textarea> should look visually identical to <input type='text'/> except it will automatically grow to fit its contents. */
+textarea {
+  resize: none;
+}
+
+strong {
+  font-weight: 500;
+}
+
+html {
   /* Use percentage to allow for browser to describe initial font-size. */
-  font: 87.5% 'Roboto';
+  font: 93.75% 'Roboto';
   -webkit-font-smoothing: subpixel-antialiased;
   text-rendering: optimizeLegibility;
+}
+
+html,
+body {
+  height: 100%;
+  min-height: 100%;
 }

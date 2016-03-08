@@ -2,7 +2,7 @@
 var htmlmin = require('gulp-htmlmin');
 var useref = require('gulp-useref');
 var runSequence = require('run-sequence');
-var Builder = require('systemjs-builder');
+var jspm = require('jspm');
 var util = require('gulp-util');
 var del = require('del');
 var imagemin = require('gulp-imagemin');
@@ -54,14 +54,17 @@ gulp.task('build:transformHtml', function() {
 // Written to a destination directory and ready for production use.
 gulp.task('build:transformJs', function(done) {
   // More information on using SystemJS builder here: https://github.com/systemjs/builder
-  const builder = new Builder(Glob.CompiledFolder, Glob.JspmConfigFile);
+  const builder = new jspm.Builder(Glob.CompiledFolder);
+
   const options = {
     // Don't include runtime because any dependencies on System are incorrect.
     // A properly built distribution should not need to run System at runtime.
     runtime: false,
     sourceMaps: true,
     // Note: Default is minify: true, but often want to toggle it off for debugging. So, I've mentioned the option here.
-    minify: true
+    minify: true,
+    production: true,
+    browser: true
   };
 
   builder.buildStatic('main.js', Glob.DistFolder + 'main.js', options)

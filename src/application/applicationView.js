@@ -11,7 +11,7 @@ export default LayoutView.extend({
   },
   initialize() {
     // Decorate in initialize because 'el' exists on the page already.
-    this.$el.addClass(styles.application);
+    this.el.classList.add(styles.application);
   },
   onRender() {
     this.showChildView('header', new HeaderView());
