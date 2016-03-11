@@ -30,7 +30,6 @@ SystemJS.config({
     "child_process": "github:jspm/nodelibs-child_process@0.2.0-alpha",
     "constants": "github:jspm/nodelibs-constants@0.2.0-alpha",
     "core-js": "npm:core-js@1.2.6",
-    "cssnano": "npm:cssnano@3.5.2",
     "events": "github:jspm/nodelibs-events@0.2.0-alpha",
     "fs": "github:jspm/nodelibs-fs@0.2.0-alpha",
     "handlebars": "github:components/handlebars.js@4.0.5",
@@ -57,7 +56,7 @@ SystemJS.config({
     "string_decoder": "github:jspm/nodelibs-string_decoder@0.2.0-alpha",
     "text": "github:systemjs/plugin-text@0.0.4",
     "tty": "github:jspm/nodelibs-tty@0.2.0-alpha",
-    "underscore": "npm:underscore@1.8.3",
+    "underscore": "npm:lodash@3.10.1",
     "url": "github:jspm/nodelibs-url@0.2.0-alpha",
     "util": "github:jspm/nodelibs-util@0.2.0-alpha"
   },
@@ -157,7 +156,7 @@ SystemJS.config({
     },
     "npm:backbone@1.2.3": {
       "map": {
-        "underscore": "npm:underscore@1.8.3"
+        "underscore": "lodash"
       }
     },
     "npm:brace-expansion@1.1.3": {
@@ -215,9 +214,7 @@ SystemJS.config({
       }
     },
     "npm:core-js@1.2.6": {
-      "map": {
-        "systemjs-json": "github:systemjs/plugin-json@0.1.0"
-      }
+      "map": {}
     },
     "npm:css-modules-loader-core@1.0.0": {
       "map": {
@@ -311,9 +308,7 @@ SystemJS.config({
       "map": {}
     },
     "npm:isarray@1.0.0": {
-      "map": {
-        "systemjs-json": "github:systemjs/plugin-json@0.1.0"
-      }
+      "map": {}
     },
     "npm:js-base64@2.1.9": {
       "map": {}
@@ -573,8 +568,7 @@ SystemJS.config({
       "map": {
         "js-base64": "npm:js-base64@2.1.9",
         "source-map": "npm:source-map@0.5.3",
-        "supports-color": "npm:supports-color@3.1.2",
-        "systemjs-json": "github:systemjs/plugin-json@0.1.0"
+        "supports-color": "npm:supports-color@3.1.2"
       }
     },
     "npm:postcss@5.0.19": {

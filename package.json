@@ -46,12 +46,9 @@
       "postcss-mixins": "npm:postcss-mixins@^4.0.1",
       "postcss-modules-values": "npm:postcss-modules-values@^1.1.1",
       "postcss-nesting": "npm:postcss-nesting@^2.3.0",
-      "text": "github:systemjs/plugin-text@^0.0.4",
-      "underscore": "npm:underscore@^1.8.3"
+      "text": "github:systemjs/plugin-text@^0.0.4"
     },
-    "devDependencies": {
-      "cssnano": "npm:cssnano@^3.5.2"
-    },
+    "devDependencies": {},
     "peerDependencies": {
       "assert": "github:jspm/nodelibs-assert@^0.2.0-alpha",
       "buffer": "github:jspm/nodelibs-buffer@^0.2.0-alpha",
@@ -74,6 +71,14 @@
       "util": "github:jspm/nodelibs-util@^0.2.0-alpha"
     },
     "overrides": {
+      "github:MeoMix/jspm-loader-css@master": {
+        "map": {
+          "cssnano": {
+            "browser": "@empty",
+            "~browser": "cssnano@3.5.2"
+          }
+        }
+      },
       "github:MeoMix/postcss-import@master": {
         "registry": "npm"
       },
@@ -82,7 +87,7 @@
       },
       "npm:babel-runtime@5.8.35": {
         "main": false,
-        "dependencies": {},
+        "dependencies": { },
         "optionalDependencies": {
           "core-js": "^1.2.0"
         }
@@ -159,7 +164,7 @@
             "format": "json"
           }
         },
-        "map": {}
+        "map": { }
       },
       "npm:svgo@0.6.1": {
         "meta": {

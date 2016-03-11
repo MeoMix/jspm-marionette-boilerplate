@@ -90,9 +90,9 @@
     <Content Include="src\common\css\reset.css" />
     <Content Include="src\common\css\traits\flex.css" />
     <Content Include="src\common\css\traits\flexChild.css" />
-    <Content Include="src\common\shim\backbone.marionette.region.shim.js" />
-    <Content Include="src\common\shim\backbone.marionette.toJson.shim.js" />
-    <Content Include="src\common\shim\backbone.marionette.view.shim.js" />
+    <Content Include="src\common\shim\marionette.region.shim.js" />
+    <Content Include="src\common\shim\marionette.toJson.shim.js" />
+    <Content Include="src\common\shim\marionette.view.shim.js" />
     <Content Include="src\common\shim\handlebars.helpers.shim.js" />
     <Content Include="src\header\header.css" />
     <Content Include="src\header\headerView.js" />
