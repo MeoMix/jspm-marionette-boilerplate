@@ -87,7 +87,7 @@
       },
       "npm:babel-runtime@5.8.35": {
         "main": false,
-        "dependencies": { },
+        "dependencies": {},
         "optionalDependencies": {
           "core-js": "^1.2.0"
         }
@@ -164,7 +164,7 @@
             "format": "json"
           }
         },
-        "map": { }
+        "map": {}
       },
       "npm:svgo@0.6.1": {
         "meta": {
@@ -246,7 +246,7 @@
     "lodash": "^4.6.1",
     "lolex": "^1.4.0",
     "mocha": "^2.3.3",
-    "opn": "^4.0.1",
+    "opn": "^4.0.2",
     "path": "^0.12.7",
     "phantomjs": "^2.1.3",
     "require-dir": "^0.3.0",
