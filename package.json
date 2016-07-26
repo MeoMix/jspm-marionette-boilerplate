@@ -87,7 +87,7 @@
       },
       "npm:babel-runtime@5.8.35": {
         "main": false,
-        "dependencies": { },
+        "dependencies": {},
         "optionalDependencies": {
           "core-js": "^1.2.0"
         }
@@ -164,7 +164,7 @@
             "format": "json"
           }
         },
-        "map": { }
+        "map": {}
       },
       "npm:svgo@0.6.1": {
         "meta": {
@@ -256,6 +256,6 @@
     "yargs": "^4.2.0"
   },
   "dependencies": {
-    "jspm": "^0.16.27"
+    "jspm": "^0.16.41"
   }
 }
