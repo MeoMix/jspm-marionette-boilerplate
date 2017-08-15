@@ -57,7 +57,7 @@ You may run tests locally through Karma via the command line: `gulp test`
 
 <h3>Testing</h3>
 * [Karma](http://karma-runner.github.io/)
-* [Mocha](http://visionmedia.github.io/mocha/)
+* [Mocha](http://mochajs.org/)
 * [Chai](http://chaijs.com/)
 * [Sinon](http://sinonjs.org/)
 
